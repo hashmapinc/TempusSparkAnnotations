@@ -8,6 +8,10 @@ public class SparkActionType {
     private SparkActionRequestType request;
     private String packageName;
 
+    /**
+     * The name of the Spark Application
+     * @return The name of the Spark Application
+     */
     public String getName() {
         return name;
     }
@@ -16,6 +20,10 @@ public class SparkActionType {
         this.name = name;
     }
 
+    /**
+     * A description of the spark application
+     * @return a description of the spark application
+     */
     public String getDescriptor() {
         return descriptor;
     }
@@ -24,6 +32,10 @@ public class SparkActionType {
         this.descriptor = descriptor;
     }
 
+    /**
+     * The class name of the application
+     *  @return the class name of the appliation
+     */
     public String getClassName() {
         return className;
     }
@@ -32,6 +44,10 @@ public class SparkActionType {
         this.className = className;
     }
 
+    /**
+     * The application configuration type
+     * @return the application configuration type.]
+     */
     public SparkActionConfigurationType getConfiguration() {
         return configuration;
     }
