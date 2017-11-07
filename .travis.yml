@@ -1,0 +1,22 @@
+language: java
+
+env:
+  - USER_LANGUAGE=en USER_REGION=US'
+
+os:
+  - linux
+
+jdk:
+  - oraclejdk8
+
+install: mvn install -P !build-extras -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script: mvn test -P !build-extras -B
+
+# Caches mvn repository in order to speed upbuilds
+cache:
+  directories:
+    - $HOME/.m2
+
+after_success:
+  - ./cd/before-deploy.sh
+  - ./cd/deploy.sh
