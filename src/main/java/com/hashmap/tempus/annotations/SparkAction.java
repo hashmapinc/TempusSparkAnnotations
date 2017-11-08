@@ -10,5 +10,6 @@ import java.lang.annotation.Target;
 public @interface SparkAction {
     String name();
     String actionClass();
+    String applicationKey();
     String descriptor() default "EmptyJsonDescriptor.json";
 }

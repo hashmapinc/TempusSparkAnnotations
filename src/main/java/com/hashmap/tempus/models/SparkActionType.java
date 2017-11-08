@@ -7,6 +7,7 @@ public class SparkActionType {
     private SparkActionConfigurationType configuration;
     private SparkActionRequestType request;
     private String packageName;
+    private String applicationKey;
 
     /**
      * The name of the Spark Application
@@ -34,7 +35,7 @@ public class SparkActionType {
 
     /**
      * The class name of the application
-     *  @return the class name of the appliation
+     *  @return the class name of the applciation
      */
     public String getClassName() {
         return className;
@@ -72,6 +73,18 @@ public class SparkActionType {
         this.packageName = packageName;
     }
 
+    /**
+     * The application key or name
+     * @return the application key to identify application.]
+     */
+    public String getApplicationKey() {
+        return applicationKey;
+    }
+
+    public void setApplicationKey(String applicationKey) {
+        this.applicationKey = applicationKey;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -82,7 +95,10 @@ public class SparkActionType {
         if (!getClassName().equals(that.getClassName())) return false;
         if (!getName().equals(that.getName())) return false;
         if (!getDescriptor().equals(that.getDescriptor())) return false;
-        return getConfiguration().equals(that.getConfiguration());
+        if (!getConfiguration().equals(that.getConfiguration())) return false;
+        if (!getRequest().equals(that.getRequest())) return false;
+        if (!getPackageName().equals(that.getPackageName())) return false;
+        return getApplicationKey().equals(that.getApplicationKey());
     }
 
     @Override
@@ -91,6 +107,9 @@ public class SparkActionType {
         result = 31 * result + getName().hashCode();
         result = 31 * result + getDescriptor().hashCode();
         result = 31 * result + getConfiguration().hashCode();
+        result = 31 * result + getRequest().hashCode();
+        result = 31 * result + getPackageName().hashCode();
+        result = 31 * result + getApplicationKey().hashCode();
         return result;
     }
 }
