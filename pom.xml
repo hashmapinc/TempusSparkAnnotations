@@ -6,7 +6,7 @@
 
     <groupId>com.hashmapinc.tempus</groupId>
     <artifactId>tempus-spark-annotations</artifactId>
-    <version>0.1</version>
+    <version>0.2</version>
     <packaging>jar</packaging>
 
     <name>Spark Annotations Library</name>
