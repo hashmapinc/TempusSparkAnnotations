@@ -4,6 +4,16 @@ public class SparkActionRequestType {
     private String mainClass;
     private String jar;
     private String[] args;
+    private String descriptor;
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getMainClass() {
         return mainClass;
@@ -23,6 +33,14 @@ public class SparkActionRequestType {
 
     public String[] getArgs() {
         return args;
+    }
+
+    public String getDescriptor() {
+        return descriptor;
+    }
+
+    public void setDescriptor(String descriptor) {
+        this.descriptor = descriptor;
     }
 
     public String argsAsElements(){

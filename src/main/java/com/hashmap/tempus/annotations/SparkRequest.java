@@ -11,4 +11,6 @@ public @interface SparkRequest {
     String[] args();
     String main();
     String jar();
+    String descriptor();
+    String name();
 }
