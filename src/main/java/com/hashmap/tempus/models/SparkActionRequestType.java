@@ -6,6 +6,7 @@ public class SparkActionRequestType {
     private String[] args;
     private String descriptor;
     private String name;
+    private String argType;
 
     public String getName() {
         return name;
@@ -57,6 +58,14 @@ public class SparkActionRequestType {
         }
         String argsString = builder.toString();
         return argsString.substring(0, argsString.length() - 1);
+    }
+
+    public String getArgType() {
+        return argType;
+    }
+
+    public void setArgType(String argType) {
+        this.argType = argType;
     }
 
     public void setArgs(String[] args) {

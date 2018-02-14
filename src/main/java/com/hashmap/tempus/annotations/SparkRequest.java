@@ -1,5 +1,7 @@
 package com.hashmap.tempus.annotations;
 
+import com.hashmap.tempus.models.ArgType;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -13,4 +15,5 @@ public @interface SparkRequest {
     String jar();
     String descriptor();
     String name();
+    String argType() default ArgType.POSITIONAL;
 }
